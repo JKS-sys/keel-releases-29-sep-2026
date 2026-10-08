@@ -14,7 +14,7 @@ An AI terminal for macOS, Windows and Linux that shows at a glance which command
 
 **Website:** [ipconfig.co.network](https://ipconfig.co.network) · **App page:** [ipconfig.co.network/keel](https://ipconfig.co.network/keel) · **Releases:** [github.com/JKS-sys/keel-releases-29-sep-2026/releases](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases)
 
-**Latest: [Keel 0.4.4](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.4) — 08-oct-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.4.md)
+**Latest: [Keel 0.4.5](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.5) — 08-oct-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.5.md)
 
 ## Install
 
@@ -30,13 +30,13 @@ brew install --cask jks-sys/tap/keel
 curl -fsSL https://ipconfig.co.network/updates/keel/install.sh | bash
 ```
 
-It downloads the right installer for your computer from the release, checks its SHA-256 against `latest.json`, installs it and clears Gatekeeper's quarantine mark. Add `-s -- --version 0.4.4` after `bash` for exactly this version.
+It downloads the right installer for your computer from the release, checks its SHA-256 against `latest.json`, installs it and clears Gatekeeper's quarantine mark. Add `-s -- --version 0.4.5` after `bash` for exactly this version.
 
-**macOS — by hand:** download the DMG for your Mac ([Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-macos-apple-silicon-08-oct-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-macos-intel-08-oct-2026.dmg)), drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`. Keel is not notarised with Apple, so macOS asks once; after that it opens like any other app.
+**macOS — by hand:** download the DMG for your Mac ([Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-macos-apple-silicon-08-oct-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-macos-intel-08-oct-2026.dmg)), drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`. Keel is not notarised with Apple, so macOS asks once; after that it opens like any other app.
 
-**Windows:** download [the installer](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-windows-08-oct-2026.exe) and run it. SmartScreen asks once — *More info → Run anyway*.
+**Windows:** download [the installer](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-windows-08-oct-2026.exe) and run it. SmartScreen asks once — *More info → Run anyway*.
 
-**Linux:** install [the .deb](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-linux-08-oct-2026.deb) with your package manager (`sudo apt install ./Keel-0.4.4-linux-08-oct-2026.deb`), or make [the AppImage](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-linux-08-oct-2026.AppImage) executable (`chmod +x`) and run it. There is an [.rpm](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-linux-08-oct-2026.rpm) too.
+**Linux:** install [the .deb](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-linux-08-oct-2026.deb) with your package manager (`sudo apt install ./Keel-0.4.5-linux-08-oct-2026.deb`), or make [the AppImage](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-linux-08-oct-2026.AppImage) executable (`chmod +x`) and run it. There is an [.rpm](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-linux-08-oct-2026.rpm) too.
 
 > Plain `brew install --cask keel` (no tap name at all) works only once Keel is accepted into Homebrew's own cask list, which needs a project with enough stars and forks; until then the one-command forms above are the way.
 
@@ -44,12 +44,12 @@ Keel updates itself: every launch checks `https://ipconfig.co.network/updates/ke
 
 | Computer | Download |
 |---|---|
-| Mac with Apple silicon (M1 and later) | [Keel-0.4.4-macos-apple-silicon-08-oct-2026.dmg](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-macos-apple-silicon-08-oct-2026.dmg) |
-| Mac with Intel | [Keel-0.4.4-macos-intel-08-oct-2026.dmg](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-macos-intel-08-oct-2026.dmg) |
-| Windows | [Keel-0.4.4-windows-08-oct-2026.exe](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-windows-08-oct-2026.exe) |
-| Linux (AppImage) | [Keel-0.4.4-linux-08-oct-2026.AppImage](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-linux-08-oct-2026.AppImage) |
-| Linux (.deb) | [Keel-0.4.4-linux-08-oct-2026.deb](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-linux-08-oct-2026.deb) |
-| Linux (.rpm) | [Keel-0.4.4-linux-08-oct-2026.rpm](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.4/Keel-0.4.4-linux-08-oct-2026.rpm) |
+| Mac with Apple silicon (M1 and later) | [Keel-0.4.5-macos-apple-silicon-08-oct-2026.dmg](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-macos-apple-silicon-08-oct-2026.dmg) |
+| Mac with Intel | [Keel-0.4.5-macos-intel-08-oct-2026.dmg](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-macos-intel-08-oct-2026.dmg) |
+| Windows | [Keel-0.4.5-windows-08-oct-2026.exe](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-windows-08-oct-2026.exe) |
+| Linux (AppImage) | [Keel-0.4.5-linux-08-oct-2026.AppImage](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-linux-08-oct-2026.AppImage) |
+| Linux (.deb) | [Keel-0.4.5-linux-08-oct-2026.deb](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-linux-08-oct-2026.deb) |
+| Linux (.rpm) | [Keel-0.4.5-linux-08-oct-2026.rpm](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.5/Keel-0.4.5-linux-08-oct-2026.rpm) |
 
 ## Screenshots
 
@@ -89,7 +89,14 @@ Keel updates itself: every launch checks `https://ipconfig.co.network/updates/ke
 
 *Settings → AI: a catalogue of offline models that fit this computer, any GGUF file or folder, Hugging Face links, AI apps already running here, GitHub Copilot, services by URL.*
 
-## What's new in 0.4.4
+## What's new in 0.4.5
+
+- **No more "Keel would like to access files in your Downloads folder" after every update.** macOS remembers that answer per code identity, and every build used to be a new one (ad-hoc signed). `update.sh` now makes a signing certificate once on the Mac and signs every release with it, so the answer sticks across updates. Keel also no longer looks in Downloads for AI models on its own (add that folder by hand if you keep models there).
+- **"Paste 4 lines?" — Always paste.** One click stops the question for good; Settings → Notifications brings it back.
+- **Forex works:** prices show the decimals currency pairs move in (EUR/USD 1.12473, USD/INR 83.1234) — two decimals made every forex price, the chart axis, the stop and the target read "1.12". EURUSD, EUR/USD, USDJPY, XAUUSD typed in search now find the right Yahoo symbol, and AUD/USD, USD/CAD, USD/CHF, NZD/USD, EUR/JPY, EUR/GBP and EUR/INR join the watchlist (with Stooq daily history behind them).
+- **Transparency fixed:** the window now goes see-through and the text stays solid. xterm keeps text readable by comparing it with the background, and the transparent background it was given counted as black — so in the light theme dark text was flipped to light, the opposite of what you asked for.
+- **A new start-up, made with /ship like Twig's:** the tile draws itself, the >_ follows, sparks fly, "Keel" rises in a shimmering gradient, "An AI terminal" types itself, "By Jagadeesh Kumar S" fades in, over drifting colour and a sweep line — with the /ship start-up chord. Any key or click skips it.
+- **More colour, no pink:** the prompt itself (user@host gold, the folder blue, (venv) and [branch] cyan, the sign violet) when your shell prints it plain; the status bar in colour; three more sound packs (Crisp, Wood, Space); ripples on buttons.
 
 - **The Owner Panel is a window of its own** (⌥⌘O, or Keel → Owner Panel; Markets opens it on the Markets tab) — the terminal windows stay as they are. Subscriptions now have the full set of operations: create one for someone (Razorpay's payment page comes back to send), pause, resume, change the plan now or at the period's end, undo a scheduled change, a note, hide, cancel. Crash reports are readable in full, deletable one by one or all at once, exportable as .md or .txt to Downloads, with the crash folder one click away.
 - **Markets: the trade plan, in pips and in Chennai time.** Every reading says BUY or SELL, the entry at the next candle's open with its time in IST, the stop-loss and the take-profit in price and in pips, reward-to-risk, when past winners typically reached the target (a take-profit time in IST — an estimate from the record, never a promise) and how past signals ended. A confidence grade (A, B, C) comes from each instrument's own out-of-sample record; *Highest confidence only* shows the A readings and *Scan the watchlist* reads every instrument one after another. The rule now re-tunes itself whenever new candles arrive and keeps a log, so the panel shows how its out-of-sample rate moved. There is no guaranteed signal and no 0 % risk, and the panel says so — anyone selling one is lying.
@@ -136,7 +143,9 @@ Keel updates itself: every launch checks `https://ipconfig.co.network/updates/ke
 - **Ask, Explain, Fix, autocomplete.** Type `# what you want` at the prompt or press ⌘I for one exact command; ⇧⌘E explains the last command or error; ⇧⌘F fixes a failed one; grey suggestions as you type come first from your history, then exact completions (git, brew, docker, npm, cargo subcommands, branches, scripts, Makefile targets, SSH hosts), then the AI.
 - **GitHub Copilot and AI services by URL** (Keel Pro) — sign in to Copilot in the browser; add OpenAI, Gemini, Groq, Mistral, DeepSeek, OpenRouter or any OpenAI-compatible server by its URL.
 - **Markets** (on the owner's Mac): signals for commodities, indices, shares, crypto and forex on 1 m, 5 m, 30 m, 1 h, daily or any number of days, over all the history the source has. A trade plan for every reading — side, entry at the next candle's open, stop-loss and take-profit in pips, the times in Chennai (IST) — a confidence grade from the out-of-sample record with a "highest confidence only" filter and a watchlist scan, a rule that re-tunes itself as candles arrive and shows how its record moved, post-mortems of every past signal, position size and the chance of a losing run. Yahoo, Binance, Coinbase and Stooq as sources, spaced out so none refuses — honest numbers, never a promise.
-- **Start-up with a chord** — the mark draws itself, "An AI terminal" rises, a short chord plays; off in Settings → Motion or with Reduce motion.
+- **Start-up, like Twig's** — the tile draws itself, sparks fly, "Keel" rises, "An AI terminal" types itself, "By Jagadeesh Kumar S" fades in, with a synthesised start-up chord; any key skips it; off in Settings → Motion or with Reduce motion.
+- **Paste without the question** — "Always paste" stops the several-lines question for good; Settings brings it back.
+- **macOS asks for Downloads once, not after every update** — every release is signed with the same identity, so macOS remembers.
 - **Transparency** — Settings → Appearance → Transparency lets the desktop show through, with the system's blur behind it on macOS and Windows.
 - **24-hour time** everywhere: the status-bar clock, the Owner Panel, crash reports, Markets.
 - **Animated tab icons** — each tab shows what it is doing: building, downloading, uploading, testing, serving, editing, git, SSH, sudo, AI or a script, each in its own colour (never pink).
