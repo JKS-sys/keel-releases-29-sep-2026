@@ -16,7 +16,7 @@ An AI terminal for macOS, Windows, Linux, ChromeOS and FreeBSD that shows at a g
 
 **Website:** [ipconfig.co.network](https://ipconfig.co.network) · **App page:** [ipconfig.co.network/keel](https://ipconfig.co.network/keel) · **Releases:** [github.com/JKS-sys/keel-releases-29-sep-2026/releases](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases)
 
-**Latest: [Keel 0.4.7](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.7) — 17-oct-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.7.md)
+**Latest: [Keel 0.4.8](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.8) — 17-oct-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.8.md)
 
 ## Install
 
@@ -37,11 +37,11 @@ Pour picks the right installer for your computer, checks its SHA-256 against `la
 
 **Or download it yourself:**
 
-- **macOS** — [Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-macos-apple-silicon-17-oct-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-macos-intel-17-oct-2026.dmg): drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`.
-- **Windows 10 and 11** — [x64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-windows-x64-17-oct-2026.exe) · [ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-windows-arm64-17-oct-2026.exe). SmartScreen asks once — *More info → Run anyway*.
-- **Linux** — [.deb x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-amd64-17-oct-2026.deb) · [.deb ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-arm64-17-oct-2026.deb) · [.rpm x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-x86_64-17-oct-2026.rpm) · [.rpm ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-aarch64-17-oct-2026.rpm) · [AppImage x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-x86_64-17-oct-2026.AppImage) (`chmod +x`, then run it).
+- **macOS** — [Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-macos-apple-silicon-17-oct-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-macos-intel-17-oct-2026.dmg): drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`.
+- **Windows 10 and 11** — [x64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-windows-x64-17-oct-2026.exe) · [ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-windows-arm64-17-oct-2026.exe). SmartScreen asks once — *More info → Run anyway*.
+- **Linux** — [.deb x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-linux-amd64-17-oct-2026.deb) · [.deb ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-linux-arm64-17-oct-2026.deb) · [.rpm x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-linux-x86_64-17-oct-2026.rpm) · [.rpm ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-linux-aarch64-17-oct-2026.rpm) · [AppImage x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-linux-x86_64-17-oct-2026.AppImage) (`chmod +x`, then run it).
 - **ChromeOS** — turn on *Settings → About ChromeOS → Developers → Linux development environment*, then install the Linux .deb for your Chromebook (`sudo apt install ./Keel-…deb`), or use Pour in the Linux terminal.
-- **FreeBSD 14** — [x86_64 tarball](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-freebsd-x86_64-17-oct-2026.tar.gz): `sudo pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack, run `./keel`.
+- **FreeBSD 14** — [x86_64 tarball](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.8/Keel-0.4.8-freebsd-x86_64-17-oct-2026.tar.gz): `sudo pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack, run `./keel`.
 - **Haiku** — not available: the web view library Keel is built on has no Haiku backend yet, so there is no honest way to ship it there.
 
 **No Pour, one line (macOS and Linux):** `curl -fsSL https://ipconfig.co.network/updates/keel/install.sh | bash`
@@ -110,7 +110,7 @@ One account for every ipconfig app: type your email, then the 6-digit code — K
 
 <a href="assets/demos/owner.mp4"><img src="assets/demos/owner.webp" width="900" alt="Keel — The Owner Panel (animation; click for the video with sound)"></a>
 
-Always connected to the dashboard: installs, people, codes, subscriptions and crash reports with search, bulk actions and eight layouts — list, cards, compact, tiles, board, timeline, magazine and masonry. · [▶ video with sound](assets/demos/owner.mp4)
+Always connected to the dashboard: installs, people, codes, subscriptions and crash reports with search, bulk actions and twelve layouts — list, cards, compact, tiles, board, timeline, magazine, masonry, gallery, strip, stack and grouped. · [▶ video with sound](assets/demos/owner.mp4)
 
 ### Small windows stay tidy
 
@@ -188,23 +188,18 @@ Shrink the window and nothing overlaps or scrolls sideways: the toolbar wraps, S
 
 *The dark theme on the Mac: warm black, gold and warm white, straight from the app icon.*
 
-## What's new in 0.4.7
+## What's new in 0.4.8
 
-- **Every system, built on your Mac.** `bash update.sh` now builds every installer itself — macOS (Apple silicon and Intel), Windows x64 and ARM64 (cross-compiled), Linux x86_64 and ARM64 (.deb, .rpm, AppImage, in Docker), FreeBSD 14 — side by side with a live board, no GitHub Actions. ChromeOS installs the Linux .deb. Haiku is not possible (no web view backend), and the notes say so.
-- **Install with Pour** on every system: `pour install --cask keel`. Keel registers itself on Pour at every release; no Homebrew tap any more.
-- **Mac App Store and Microsoft Store** packages are built and submitted automatically once `.env` has their credentials (left empty for now).
-- **Accounts.** Sign in with an emailed 6-digit code or a password, one account for every ipconfig app; Pro follows your account to two computers, with "Use this computer instead", your devices and subscriptions in Settings → Account, and 14 days offline.
-- **The Owner Panel is always connected** to the ipconfig dashboard — no connect or sync button: installs, people, devices, codes, subscriptions and crash reports with search, bulk actions, export and eight layouts.
-- **Menu bar, Dock and background.** Keel can live in the Dock, the menu bar, both, or in the background (and the background process can be turned off). The menu-bar icon opens a quick panel on a left click and a full menu on a right click; the Dock icon's right-click menu has New Window, New Tab, a folder, a script, AI, the speed test, recent folders and more. While Keel is in the Dock, closing the last window or tab quits it completely.
-- **Right-click in Finder, Explorer and Linux file managers:** New Keel Tab / Window Here, Split Here, Run, Edit, Git Status, Folder Size, List Files, Ask AI, Copy Path.
-- **Desktop notifications** for long or failed commands, updates and Pro — click one and the very window it came from comes back.
-- **`speed`** now shows download **and upload** speed and latency (`curl -fsSL https://ipconfig.co.network/speed | sh`), in zsh, bash, fish and PowerShell.
-- **Richer right-click menus** with submenus, checkmarks and shortcuts; Arrange Panes as a grid, columns, rows or main + side; menus become drill-down lists in small windows.
-- **More colour, no pink:** TODOs, ✓ and ✗, `code`, **bold**, table borders and separator lines, nine tab colours.
-- **More sound and motion:** 44 sounds in 13 sets, each with its own vector animation; Motion Off, Subtle or Lively.
-- **Settings in ten pages** on an icon rail; small windows never overlap or scroll sideways.
-- **README:** eleven animated demos (with sound in the videos) and fourteen 2× screenshots, recorded from the real interface; a star request at the top and the end; all 20 GitHub topics.
-- Keel is now under a proprietary licence (LICENSE).
+- **Faster.** The window opens with a quarter less code to load: Markets, the release notes, AI settings, the account page and the Windows-only GPU renderer now load when first used. Start-up asks Rust for its information off the main thread, in parallel with the AI settings. Colouring big output no longer slows down with every colour code in it, a flood of output (a huge log) is drawn plain until it calms down, and lines longer than 4,096 characters are shown as they are.
+- **An animated menu-bar icon.** It leaps on a left click, breathes on a right click, sweeps when a command finishes while you are elsewhere and shakes when one fails — each with a soft sound, following Settings → Sound & Motion — and a corner badge shows something running (a ring) or a failure (a dot). The quick panel replays its entrance, sound and picture each time it opens, and no longer re-animates every four seconds.
+- **Twenty right-click actions in Finder, Explorer and Linux file managers** (ten new): Run Tests Here, Folder Tree, Git History, Git Pull, Count Lines of Code, Serve This Folder on the Web, File Info, SHA-256 Checksum, Make Executable and Compress.
+- **A bigger Dock menu:** Split Right / Down, Compact and Large Window, and AI, Tools, Appearance and Sounds & Animations submenus.
+- **More in the terminal's right-click menu:** a Selection submenu (copy as a Markdown code block, as one line, type it at the prompt, open it, count words and lines, search the web), Recent Commands to run again, and the new folder actions under Run.
+- **Eight ways to arrange panes** (four new): one big on the right, on top, at the bottom, and focus in the middle.
+- **Twelve layouts in the Owner Panel** (four new): gallery, strip, stack and grouped.
+- **More colour, no pink:** paths by what they hold (archives amber, pictures and media violet, data cyan, folders bright blue), relative paths like `src/main.rs`, issue numbers (#482), mentions (@name) and MAC addresses.
+- **17 new sounds, each with its own vector animation** (61 in all): a finished command sounds like what it was — tests, a build, git, a download, an upload, ssh or a long wait — and text size, arranging, history, the Dock, Finder actions, serving a folder and secure typing have their own.
+- **Releasing:** the build board no longer reprints itself down the screen; demo videos reach the public repo (sent as a file, not an over-long argument); the repos' topics are replaced, not added past GitHub's limit of 20; R2 uploads use full paths (a relative one stopped the 0.4.7 release) and show Cloudflare's own reason when one is refused, leaving `latest.json` untouched; `bash update.sh r2` finishes a release that stopped after GitHub, Pour included.
 
 ## Features
 
@@ -214,17 +209,17 @@ Shrink the window and nothing overlaps or scrolls sideways: the toolbar wraps, S
 - **GitHub Copilot and AI services by URL** (Keel Pro) — OpenAI, Gemini, Groq, Mistral, DeepSeek, OpenRouter or any OpenAI-compatible server.
 - **One account for every ipconfig app** — sign in with an emailed 6-digit code (it signs in by itself at the sixth digit) or a password; Pro follows your account to up to two computers, with “Use this computer instead” when every seat is taken, your subscriptions and devices in Settings → Account, and 14 days offline.
 - **Lives where you want** — in the Dock, in the menu bar, both, or in the background (Settings → Menus & Dock). While Keel is in the Dock, closing the last window or tab quits it completely.
-- **Menu-bar icon** — left click opens a quick panel (windows, recent folders, twelve one-click actions, where Keel lives); right click opens the full menu.
-- **Dock menu** — right-click Keel in the Dock: New Window, New Tab, a tab in a folder, run a script, Ask AI, Fix, Speed Test, Quick Panel, Gather or Merge windows, Recent Folders, Keel Lives In and More.
-- **Right-click in Finder, Explorer and Linux file managers** — on files and folders: New Keel Tab / Window Here, Split Here, Run in Keel, Edit in Keel, Git Status, Folder Size, List Files, Ask AI About It, Copy Path (macOS Services, a Windows “Keel” submenu, Nautilus, Caja, Nemo and Dolphin).
+- **Menu-bar icon** — left click opens a quick panel (windows, recent folders, twelve one-click actions, where Keel lives); right click opens the full menu. The icon itself is animated: it leaps on a left click, breathes on a right click, sweeps when a command finishes in the background and shakes when one fails — each with a soft sound — and a corner badge shows that something is running (a ring) or failed (a dot).
+- **Dock menu** — right-click Keel in the Dock: New Window, New Tab, a tab in a folder, run a script, Split Right / Down, Ask AI, Fix, Speed Test, Quick Panel, Gather or Merge windows, Compact / Large Window, Recent Folders, Keel Lives In, AI, Tools, Appearance, Sounds & Animations and More.
+- **Right-click in Finder, Explorer and Linux file managers** — twenty actions on files and folders: New Keel Tab / Window Here, Split Here, Run in Keel, Edit in Keel, Git Status, Git History, Git Pull, Run Tests Here, Folder Tree, Count Lines of Code, Serve This Folder on the Web, What Takes Space, List Files, File Info, SHA-256 Checksum, Make Executable, Compress, Ask AI About It, Copy Path (macOS Services, a Windows “Keel” submenu, Nautilus, Caja, Nemo and Dolphin).
 - **Desktop notifications** — when a long command finishes or fails while you are elsewhere, when an update is ready, when Pro changes; clicking one brings back the very window it came from.
 - **Right-click menus everywhere** — terminal, tabs, marks, links, folders — with submenus, checkmarks and shortcuts; in a small window they turn into a list you drill into.
 - **Tabs, splits and windows** — drag a tab out for its own window or onto a terminal to join it as a split; Arrange Panes as a grid, columns, rows or main + side; merge all windows; resize by dragging. Small windows never overlap or scroll sideways.
 - **Colour everywhere, no pink** — plain output is coloured for you (numbers, paths, strings, links, errors, versions, dates, sizes, durations, TODOs, ✓ and ✗, `code`, **bold**, table borders), brackets by depth so pairs match, every tab in its own colour, nine tab hues. Light and dark themes follow your system.
-- **Animations and sounds** — 44 sounds in 13 sound sets, every one with its own self-drawing vector animation; Motion Off, Subtle or Lively, with tiny interface sounds in Lively only.
+- **Animations and sounds** — 61 sounds in 13 sound sets, every one with its own self-drawing vector animation (58 scenes) — a finished command sounds like what it was: tests, a build, git, a download, an upload, ssh or a long wait; Motion Off, Subtle or Lively, with tiny interface sounds in Lively only.
 - **Start-up** — the tile draws itself, sparks fly, "Keel" rises, "An AI terminal" types itself, "By Jagadeesh Kumar S" fades in, with a synthesised chord; any key skips it.
 - **Built-in `speed`** — download and upload speed and latency from ipconfig.co.network, in every shell.
-- **Owner Panel** (on the owner's computer only), always connected to the ipconfig dashboard: installs, people, devices, activation codes, subscriptions and crash reports — search, bulk actions, export, and eight layouts.
+- **Owner Panel** (on the owner's computer only), always connected to the ipconfig dashboard: installs, people, devices, activation codes, subscriptions and crash reports — search, bulk actions, export, and twelve layouts.
 - **Markets** (on the owner's computer): signals with a trade plan, out-of-sample success rates and confidence grades — honest numbers, never a promise.
 - **Crash reports** — written to `~/.keel/crashes`; sent only with a yes, and never with a command, output or file name of yours.
 - **Every system** — macOS (Apple silicon and Intel), Windows 10/11 (x64 and ARM64), Linux (x86_64 and ARM64: .deb, .rpm, AppImage), ChromeOS (through its Linux environment) and FreeBSD 14.
