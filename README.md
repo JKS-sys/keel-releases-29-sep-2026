@@ -10,238 +10,229 @@
 
 # Keel — AI Terminal
 
-An AI terminal for macOS, Windows and Linux that shows at a glance which commands worked and which failed, with offline AI that is free for everyone.
+An AI terminal for macOS, Windows, Linux, ChromeOS and FreeBSD that shows at a glance which commands worked and which failed, with offline AI that is free for everyone.
+
+> ⭐ **If Keel helps you, please give this repository a star** — [★ Star on GitHub](https://github.com/JKS-sys/keel-releases-29-sep-2026) — it is how other people find it, and it tells me what to build next.
 
 **Website:** [ipconfig.co.network](https://ipconfig.co.network) · **App page:** [ipconfig.co.network/keel](https://ipconfig.co.network/keel) · **Releases:** [github.com/JKS-sys/keel-releases-29-sep-2026/releases](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases)
 
-**Latest: [Keel 0.4.6](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.6) — 11-oct-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.6.md)
+**Latest: [Keel 0.4.7](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.7) — 17-oct-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.7.md)
 
 ## Install
 
-**macOS — one command, no `brew tap` step (Homebrew adds the tap itself):**
+**macOS, Linux, ChromeOS and FreeBSD — with [Pour](https://ipconfig.co.network/pour), in two commands:**
 
 ```sh
-brew install --cask jks-sys/tap/keel
+curl -fsSL https://ipconfig.co.network/pour/install | sh
+pour install --cask keel
 ```
 
-**macOS or Linux — one command, no Homebrew, no tap, no repository (curl):**
+**Windows — with Pour:** download [pour-windows-x86_64.exe](https://ipconfig.co.network/pour/dl/pour-windows-x86_64.exe), then in PowerShell:
 
-```sh
-curl -fsSL https://ipconfig.co.network/updates/keel/install.sh | bash
+```powershell
+.\pour-windows-x86_64.exe install --cask keel
 ```
 
-It downloads the right installer for your computer from the release, checks its SHA-256 against `latest.json`, installs it and clears Gatekeeper's quarantine mark. Add `-s -- --version 0.4.6` after `bash` for exactly this version.
+Pour picks the right installer for your computer, checks its SHA-256 against `latest.json` and keeps Keel up to date with `pour upgrade`.
 
-**macOS — by hand:** download the DMG for your Mac ([Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-macos-apple-silicon-11-oct-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-macos-intel-11-oct-2026.dmg)), drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`. Keel is not notarised with Apple, so macOS asks once; after that it opens like any other app.
+**Or download it yourself:**
 
-**Windows:** download [the installer](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-windows-11-oct-2026.exe) and run it. SmartScreen asks once — *More info → Run anyway*.
+- **macOS** — [Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-macos-apple-silicon-17-oct-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-macos-intel-17-oct-2026.dmg): drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`.
+- **Windows 10 and 11** — [x64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-windows-x64-17-oct-2026.exe) · [ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-windows-arm64-17-oct-2026.exe). SmartScreen asks once — *More info → Run anyway*.
+- **Linux** — [.deb x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-amd64-17-oct-2026.deb) · [.deb ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-arm64-17-oct-2026.deb) · [.rpm x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-x86_64-17-oct-2026.rpm) · [.rpm ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-aarch64-17-oct-2026.rpm) · [AppImage x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-linux-x86_64-17-oct-2026.AppImage) (`chmod +x`, then run it).
+- **ChromeOS** — turn on *Settings → About ChromeOS → Developers → Linux development environment*, then install the Linux .deb for your Chromebook (`sudo apt install ./Keel-…deb`), or use Pour in the Linux terminal.
+- **FreeBSD 14** — [x86_64 tarball](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.7/Keel-0.4.7-freebsd-x86_64-17-oct-2026.tar.gz): `sudo pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack, run `./keel`.
+- **Haiku** — not available: the web view library Keel is built on has no Haiku backend yet, so there is no honest way to ship it there.
 
-**Linux:** install [the .deb](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-linux-11-oct-2026.deb) with your package manager (`sudo apt install ./Keel-0.4.6-linux-11-oct-2026.deb`), or make [the AppImage](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-linux-11-oct-2026.AppImage) executable (`chmod +x`) and run it. There is an [.rpm](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-linux-11-oct-2026.rpm) too.
-
-> Plain `brew install --cask keel` (no tap name at all) works only once Keel is accepted into Homebrew's own cask list, which needs a project with enough stars and forks; until then the one-command forms above are the way.
+**No Pour, one line (macOS and Linux):** `curl -fsSL https://ipconfig.co.network/updates/keel/install.sh | bash`
 
 Keel updates itself: every launch checks `https://ipconfig.co.network/updates/keel/latest.json` (and the GitHub releases as a second source), and an update installs from the status bar.
 
-| Computer | Download |
-|---|---|
-| Mac with Apple silicon (M1 and later) | [Keel-0.4.6-macos-apple-silicon-11-oct-2026.dmg](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-macos-apple-silicon-11-oct-2026.dmg) |
-| Mac with Intel | [Keel-0.4.6-macos-intel-11-oct-2026.dmg](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-macos-intel-11-oct-2026.dmg) |
-| Windows | [Keel-0.4.6-windows-11-oct-2026.exe](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-windows-11-oct-2026.exe) |
-| Linux (AppImage) | [Keel-0.4.6-linux-11-oct-2026.AppImage](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-linux-11-oct-2026.AppImage) |
-| Linux (.deb) | [Keel-0.4.6-linux-11-oct-2026.deb](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-linux-11-oct-2026.deb) |
-| Linux (.rpm) | [Keel-0.4.6-linux-11-oct-2026.rpm](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.6/Keel-0.4.6-linux-11-oct-2026.rpm) |
-
 ## See it move
+
+Each animation plays right here; click one for the full-quality video with sound.
 
 ### The start-up
 
-<a href="assets/demos/startup.mp4"><img src="assets/demos/startup.gif" width="800" alt="Keel — The start-up (animation)"></a>
+<a href="assets/demos/startup.mp4"><img src="assets/demos/startup.webp" width="900" alt="Keel — The start-up (animation; click for the video with sound)"></a>
 
-The tile draws itself, sparks fly, "Keel" rises, "An AI terminal" types itself and "By Jagadeesh Kumar S" fades in, with a synthesised chord. Any key skips it.
+The tile draws itself, sparks fly, "Keel" rises, "An AI terminal" types itself and "By Jagadeesh Kumar S" fades in — then straight to your shell. Any key skips it. · [▶ video with sound](assets/demos/startup.mp4)
 
-### Every command marked
+### Every command marked, every word coloured
 
-<a href="assets/demos/marks.mp4"><img src="assets/demos/marks.gif" width="800" alt="Keel — Every command marked (animation)"></a>
+<a href="assets/demos/marks.mp4"><img src="assets/demos/marks.webp" width="900" alt="Keel — Every command marked, every word coloured (animation; click for the video with sound)"></a>
 
-A gold dot for a command that worked, a red badge for one that failed — in the gutter, on the scrollbar, on the tab and in the status bar, with the exit code in plain words.
+A gold check for a command that worked, a red badge that says why for one that failed — in the gutter, on the scrollbar, on the tab and in the status bar. Numbers, paths, strings, versions and brackets each get their own colour, with no pink anywhere. · [▶ video with sound](assets/demos/marks.mp4)
 
 ### Ask for a command
 
-<a href="assets/demos/ai-ask.mp4"><img src="assets/demos/ai-ask.gif" width="800" alt="Keel — Ask for a command (animation)"></a>
+<a href="assets/demos/ai-ask.mp4"><img src="assets/demos/ai-ask.webp" width="900" alt="Keel — Ask for a command (animation; click for the video with sound)"></a>
 
-⌘I (or `# …` at the prompt): describe what you want in words and get one exact command back. Nothing runs until you choose Run.
+⌘I (or `# …` at the prompt): describe what you want in plain words and get one exact command back. Nothing runs until you choose Run. · [▶ video with sound](assets/demos/ai-ask.mp4)
 
-### Fix with AI
+### Fix a failed command
 
-<a href="assets/demos/ai-fix.mp4"><img src="assets/demos/ai-fix.gif" width="800" alt="Keel — Fix with AI (animation)"></a>
+<a href="assets/demos/ai-fix.mp4"><img src="assets/demos/ai-fix.webp" width="900" alt="Keel — Fix a failed command (animation; click for the video with sound)"></a>
 
-A command failed: Fix with AI in the status bar reads the error and suggests the fix — here, install the missing Python package and run the script again.
+A command failed: Fix with AI reads the error and suggests the fix. Offline models on your own computer are free for everyone. · [▶ video with sound](assets/demos/ai-fix.mp4)
 
-### Explain
+### Tabs, splits and arranging
 
-<a href="assets/demos/explain.mp4"><img src="assets/demos/explain.gif" width="800" alt="Keel — Explain (animation)"></a>
+<a href="assets/demos/splits.mp4"><img src="assets/demos/splits.webp" width="900" alt="Keel — Tabs, splits and arranging (animation; click for the video with sound)"></a>
 
-Any command, its output or a selection, explained in plain words by the offline model on your own computer.
+Split right and down, then Arrange → Grid, Columns or Rows lays every pane out in one click. Each tab keeps its own colour. · [▶ video with sound](assets/demos/splits.mp4)
 
-### Tabs and splits
+### Right-click menus
 
-<a href="assets/demos/tabs-splits.mp4"><img src="assets/demos/tabs-splits.gif" width="800" alt="Keel — Tabs and splits (animation)"></a>
+<a href="assets/demos/menus.mp4"><img src="assets/demos/menus.webp" width="900" alt="Keel — Right-click menus (animation; click for the video with sound)"></a>
 
-Split right, split down, new tabs — every pane its own shell, every tab its own colour; drag a tab out for a window of its own.
+Right-click anywhere for a menu that fits what is under the pointer: submenus for Look, Arrange and AI, checkmarks, keyboard shortcuts — and in a small window the menu becomes a drill-down list so nothing is cut off. · [▶ video with sound](assets/demos/menus.mp4)
+
+### The menu-bar quick panel
+
+<a href="assets/demos/quick-panel.mp4"><img src="assets/demos/quick-panel.webp" width="900" alt="Keel — The menu-bar quick panel (animation; click for the video with sound)"></a>
+
+Click Keel’s icon in the menu bar: open windows, recent folders, twelve one-click actions and where Keel lives (Dock, menu bar, both or in the background). · [▶ video with sound](assets/demos/quick-panel.mp4)
 
 ### Settings
 
-<a href="assets/demos/settings.mp4"><img src="assets/demos/settings.gif" width="800" alt="Keel — Settings (animation)"></a>
+<a href="assets/demos/settings.mp4"><img src="assets/demos/settings.webp" width="900" alt="Keel — Settings (animation; click for the video with sound)"></a>
 
-Light and dark, transparency, motion, sounds and sound sets, and Settings → AI with offline models that fit this computer.
+Ten pages on an icon rail: Look, Sound & Motion (with every sound and its animation), Terminal, Notifications, Menus & Dock, Account, AI, Keel Pro, Privacy and Updates. · [▶ video with sound](assets/demos/settings.mp4)
+
+### Sign in with an email code
+
+<a href="assets/demos/account.mp4"><img src="assets/demos/account.webp" width="900" alt="Keel — Sign in with an email code (animation; click for the video with sound)"></a>
+
+One account for every ipconfig app: type your email, then the 6-digit code — Keel signs in by itself. Your computers, seats and subscriptions, all in one place. · [▶ video with sound](assets/demos/account.mp4)
+
+### The Owner Panel
+
+<a href="assets/demos/owner.mp4"><img src="assets/demos/owner.webp" width="900" alt="Keel — The Owner Panel (animation; click for the video with sound)"></a>
+
+Always connected to the dashboard: installs, people, codes, subscriptions and crash reports with search, bulk actions and eight layouts — list, cards, compact, tiles, board, timeline, magazine and masonry. · [▶ video with sound](assets/demos/owner.mp4)
+
+### Small windows stay tidy
+
+<a href="assets/demos/small-window.mp4"><img src="assets/demos/small-window.webp" width="900" alt="Keel — Small windows stay tidy (animation; click for the video with sound)"></a>
+
+Shrink the window and nothing overlaps or scrolls sideways: the toolbar wraps, Settings folds its rail into icons, and the terminal reflows. · [▶ video with sound](assets/demos/small-window.mp4)
 
 ## Screenshots
 
-<img src="assets/screenshots/shot-splash.webp" width="800" alt="Keel — shot-splash">
+<img src="assets/screenshots/shot-terminal.webp" width="900" alt="Keel — The terminal: gold checks for commands that worked, a red badge for the one that failed, and every kind of output in its own colour — branches, paths, versions, times, ok and failed.">
 
-*The start-up screen: the >_ mark, "Keel", "An AI terminal" and "By Jagadeesh Kumar S" over drifting colour.*
+*The terminal: gold checks for commands that worked, a red badge for the one that failed, and every kind of output in its own colour — branches, paths, versions, times, ok and failed.*
 
-<img src="assets/screenshots/shot-ai-ask.webp" width="800" alt="Keel — shot-ai-ask">
+<img src="assets/screenshots/shot-ai-ask.webp" width="900" alt="Keel — Ask for a command: the AI card waits at the bottom right while the terminal stays usable.">
 
-*Ask for a command: the AI card waits at the bottom right while the terminal stays usable — `ls -la` above it, with permissions, sizes, dates and names each in their own colour.*
+*Ask for a command: the AI card waits at the bottom right while the terminal stays usable.*
 
-<img src="assets/screenshots/shot-ai-fix.webp" width="800" alt="Keel — shot-ai-fix">
+<img src="assets/screenshots/shot-ai-fix.webp" width="900" alt="Keel — A command failed: Fix with AI suggests the corrected command with Insert, Run and Copy.">
 
-*A Python traceback in red and amber; Fix with AI suggests `pip3 install boto3 && python3 deploy.py` with Insert, Run and Copy.*
+*A command failed: Fix with AI suggests the corrected command with Insert, Run and Copy.*
 
-<img src="assets/screenshots/shot-git-colours.webp" width="800" alt="Keel — shot-git-colours">
+<img src="assets/screenshots/shot-splits.webp" width="900" alt="Keel — Four panes arranged in a grid, each its own shell, the active one outlined in gold.">
 
-*`git status` coloured for you: the branch in bold, "up to date" in gold, origin/main and the modified files in their own colours.*
+*Four panes arranged in a grid, each its own shell, the active one outlined in gold.*
 
-<img src="assets/screenshots/shot-tests-colours.webp" width="800" alt="Keel — shot-tests-colours">
+<img src="assets/screenshots/shot-menu.webp" width="900" alt="Keel — The right-click menu with its Arrange submenu open: Grid, Columns, Rows and Main + side.">
 
-*Test output: "ok" in gold, failed in red, file paths blue, the time cyan — and the prompt itself coloured (name gold, folder blue, the sign violet).*
+*The right-click menu with its Arrange submenu open: Grid, Columns, Rows and Main + side.*
 
-<img src="assets/screenshots/shot-splits.webp" width="800" alt="Keel — shot-splits">
+<img src="assets/screenshots/shot-quick.webp" width="900" alt="Keel — The menu-bar quick panel: windows, recent folders, twelve actions and where Keel lives.">
 
-*Two panes side by side: `git log --oneline` with hashes and words coloured, and `npm run dev` with Vite's local URL in blue.*
+*The menu-bar quick panel: windows, recent folders, twelve actions and where Keel lives.*
 
-<img src="assets/screenshots/shot-settings-light.webp" width="800" alt="Keel — shot-settings-light">
+<img src="assets/screenshots/shot-settings-look.webp" width="900" alt="Keel — Settings → Look: themes, transparency, text size and the colours of your output.">
 
-*Settings in the light theme: appearance, transparency, motion, text size, cursor, sounds and the sound set.*
+*Settings → Look: themes, transparency, text size and the colours of your output.*
 
-<img src="assets/screenshots/mac-split.webp" width="800" alt="Keel — mac-split">
+<img src="assets/screenshots/shot-settings-sound.webp" width="900" alt="Keel — Settings → Sound & Motion: Off, Subtle or Lively, thirteen sound sets, and every sound with the animation it plays.">
 
-*Keel on the Mac: two panes side by side, each its own shell, the active one marked in gold. ⌘D splits right, ⇧⌘D splits down, and a divider drags.*
+*Settings → Sound & Motion: Off, Subtle or Lively, thirteen sound sets, and every sound with the animation it plays.*
 
-<img src="assets/screenshots/mac-light.webp" width="800" alt="Keel — mac-light">
+<img src="assets/screenshots/shot-settings-menus.webp" width="900" alt="Keel — Settings → Menus & Dock: where Keel lives (Dock, menu bar, both or background), right-click menus in Finder, Explorer and Linux file managers.">
 
-*The light theme, two tabs, every tab in its own colour. Appearance follows the system or is set by hand.*
+*Settings → Menus & Dock: where Keel lives (Dock, menu bar, both or background), right-click menus in Finder, Explorer and Linux file managers.*
 
-<img src="assets/screenshots/mac-dark.webp" width="800" alt="Keel — mac-dark">
+<img src="assets/screenshots/shot-account.webp" width="900" alt="Keel — Settings → Account: signed in, Keel Pro, the seats in use, your computers and subscriptions.">
 
-*The dark theme: warm black, gold and warm white, straight from the app icon. The status bar shows the shell, the plan and the version.*
+*Settings → Account: signed in, Keel Pro, the seats in use, your computers and subscriptions.*
 
-<img src="assets/screenshots/mac-settings-pro.webp" width="800" alt="Keel — mac-settings-pro">
+<img src="assets/screenshots/shot-owner.webp" width="900" alt="Keel — The Owner Panel overview: installs, active computers, Pro, revenue, codes and crash reports, connected to the dashboard.">
 
-*Settings → Keel Pro on the owner’s Mac: what Pro adds, and the way into the Owner Panel.*
+*The Owner Panel overview: installs, active computers, Pro, revenue, codes and crash reports, connected to the dashboard.*
 
-<img src="assets/screenshots/terminal.png" width="800" alt="Keel — terminal">
+<img src="assets/screenshots/shot-owner-cards.webp" width="900" alt="Keel — The Owner Panel’s install list in the cards layout, one of eight.">
 
-*The terminal: every command gets a mark — gold when it worked, a red badge that says why when it failed — and the tab icon animates with what is running. Plain output is coloured: numbers, paths, strings, brackets by depth.*
+*The Owner Panel’s install list in the cards layout, one of eight.*
 
-<img src="assets/screenshots/ai.png" width="800" alt="Keel — ai">
+<img src="assets/screenshots/shot-light.webp" width="900" alt="Keel — The light theme: the same colours, tuned for a bright screen.">
 
-*AI in the terminal: ask with `#` at the prompt or ⌘I and get the exact command back. Offline models are free for everyone; Copilot and online services are Pro.*
+*The light theme: the same colours, tuned for a bright screen.*
 
-<img src="assets/screenshots/markets.png" width="800" alt="Keel — markets">
+<img src="assets/screenshots/shot-small.webp" width="900" alt="Keel — A small window (560 × 380): nothing overlaps and nothing scrolls sideways.">
 
-*Markets, in the Owner Panel window: candles, a reading with its reasons, the trade plan in pips with the entry and take-profit times in IST, the out-of-sample success rate and a confidence grade — never a guarantee.*
+*A small window (560 × 380): nothing overlaps and nothing scrolls sideways.*
 
-<img src="assets/screenshots/owner.png" width="800" alt="Keel — owner">
+<img src="assets/screenshots/mac-split.webp" width="900" alt="Keel — Keel on the Mac: two panes side by side, each its own shell, the active one marked in gold.">
 
-*The Owner Panel: subscriptions in detail — create one for someone, pause, resume, change the plan, note, hide, cancel — codes, crash reports, Markets.*
+*Keel on the Mac: two panes side by side, each its own shell, the active one marked in gold.*
 
-<img src="assets/screenshots/settings.png" width="800" alt="Keel — settings">
+<img src="assets/screenshots/mac-light.webp" width="900" alt="Keel — The light theme on the Mac, two tabs, every tab in its own colour.">
 
-*Settings → AI: a catalogue of offline models that fit this computer, any GGUF file or folder, Hugging Face links, AI apps already running here, GitHub Copilot, services by URL.*
+*The light theme on the Mac, two tabs, every tab in its own colour.*
 
-## What's new in 0.4.6
+<img src="assets/screenshots/mac-dark.webp" width="900" alt="Keel — The dark theme on the Mac: warm black, gold and warm white, straight from the app icon.">
 
-- **Forex and stock charts show again.** Yahoo had started refusing Keel's requests (HTTP 429) because of the browser-like identity they carried; Keel now uses a short identity and retries with alternates. EUR/USD-style symbols resolve correctly, and daily forex history falls back to the ECB's reference rates (Frankfurter) when Yahoo and Stooq are both unavailable.
-- **Closed windows stay closed.** A window you close yourself no longer comes back at the next launch. After ⌘Q, Quit Keel or a crash, every window comes back where it was, with its tabs, splits, folders — and the commands and their output, under a dim "restored" line.
-- **Right-click → Paste works** (and Copy everywhere): Keel now reads and writes the system clipboard itself, which the web view refused outside ⌘V.
-- **`speed`** — built in: measures your download speed in Mbps (`speed 50` for a 50 MB test). Your own `speed` alias or function still wins.
-- **Highlight rules** (Settings → Terminal): colour any word or /pattern/ in output, iTerm2-style — e.g. `ERROR = red`, `/deploy(ed)?/ = cyan`.
-- **More colour:** `ls -l` permissions read letter by letter (r gold, w amber, x cyan) instead of turning red; keywords only colour in code, not in prose.
-- **`npm run apple-sign`** releases with an Apple Developer ID — signed, notarised and stapled — and `scripts/apple-sign.sh --appstore` prepares an App Store upload (see the README for what the App Store sandbox changes). `npm run apple-check` shows what is set up.
-- **GitHub:** the public repository gets its website and topics, and its README now shows seven animated demos and new screenshots with descriptions.
-- **Keel Pro plans updated** to the new monthly (₹20) and yearly (₹220) plans; existing subscribers on the old plans keep working.
+*The dark theme on the Mac: warm black, gold and warm white, straight from the app icon.*
 
-- **No more "Keel would like to access files in your Downloads folder" after every update.** macOS remembers that answer per code identity, and every build used to be a new one (ad-hoc signed). `update.sh` now makes a signing certificate once on the Mac and signs every release with it, so the answer sticks across updates. Keel also no longer looks in Downloads for AI models on its own (add that folder by hand if you keep models there).
-- **"Paste 4 lines?" — Always paste.** One click stops the question for good; Settings → Notifications brings it back.
-- **Forex works:** prices show the decimals currency pairs move in (EUR/USD 1.12473, USD/INR 83.1234) — two decimals made every forex price, the chart axis, the stop and the target read "1.12". EURUSD, EUR/USD, USDJPY, XAUUSD typed in search now find the right Yahoo symbol, and AUD/USD, USD/CAD, USD/CHF, NZD/USD, EUR/JPY, EUR/GBP and EUR/INR join the watchlist (with Stooq daily history behind them).
-- **Transparency fixed:** the window now goes see-through and the text stays solid. xterm keeps text readable by comparing it with the background, and the transparent background it was given counted as black — so in the light theme dark text was flipped to light, the opposite of what you asked for.
-- **A new start-up, made with /ship like Twig's:** the tile draws itself, the >_ follows, sparks fly, "Keel" rises in a shimmering gradient, "An AI terminal" types itself, "By Jagadeesh Kumar S" fades in, over drifting colour and a sweep line — with the /ship start-up chord. Any key or click skips it.
-- **More colour, no pink:** the prompt itself (user@host gold, the folder blue, (venv) and [branch] cyan, the sign violet) when your shell prints it plain; the status bar in colour; three more sound packs (Crisp, Wood, Space); ripples on buttons.
+## What's new in 0.4.7
 
-- **The Owner Panel is a window of its own** (⌥⌘O, or Keel → Owner Panel; Markets opens it on the Markets tab) — the terminal windows stay as they are. Subscriptions now have the full set of operations: create one for someone (Razorpay's payment page comes back to send), pause, resume, change the plan now or at the period's end, undo a scheduled change, a note, hide, cancel. Crash reports are readable in full, deletable one by one or all at once, exportable as .md or .txt to Downloads, with the crash folder one click away.
-- **Markets: the trade plan, in pips and in Chennai time.** Every reading says BUY or SELL, the entry at the next candle's open with its time in IST, the stop-loss and the take-profit in price and in pips, reward-to-risk, when past winners typically reached the target (a take-profit time in IST — an estimate from the record, never a promise) and how past signals ended. A confidence grade (A, B, C) comes from each instrument's own out-of-sample record; *Highest confidence only* shows the A readings and *Scan the watchlist* reads every instrument one after another. The rule now re-tunes itself whenever new candles arrive and keeps a log, so the panel shows how its out-of-sample rate moved. There is no guaranteed signal and no 0 % risk, and the panel says so — anyone selling one is lying.
-- **"The data source is busy" fixed:** requests to one source are spaced 1.2 s apart, the time-frame rows load one after another instead of all at once, "too many requests" is retried on Yahoo's other host after a pause (with a session cookie and crumb when Yahoo wants one), Binance and Coinbase answer for crypto, Stooq for daily history of the big commodities, indices, currency pairs and US shares, and the last saved answer comes before an error.
-- **Start-up animation with a chord**, like Swep: the mark draws itself, "An AI terminal" rises; off in Settings → Motion or with Reduce motion.
-- **Transparency** — Settings → Appearance → Transparency: the desktop shows through, with the system's blur behind it on macOS and Windows.
-- **24-hour time** everywhere: the status-bar clock, the Owner Panel, crash reports, Markets.
-- **More colour, no pink:** git diff lines, markdown headings, comments, tool names, code keywords, git refs, host:port, money, hex colours, units, signed numbers (gold up, red down).
-- **Security:** Vite 7 (no vulnerable build tooling), per-address limits on activation attempts and crash reports in the Worker, a nonce-based CSP on the owner page, `nosniff` and `no-referrer` on every Worker answer, https-only HTTP with the scheme pinned in curl, the app's CSP enforced in the UI tests, `cargo audit` and `npm audit` clean.
-- **Release notes everywhere:** `release-notes-<version>.md` and `release-notes.md` (every version) go to GitHub and R2 with every release; everything old is removed from R2 after a successful upload.
-- The font's name no longer appears anywhere in the app.
-
-- **Keel is an AI terminal.** The offline AI — Keel's own engine and any GGUF model — is now **free for everyone**, not only Keel Pro. GitHub Copilot (sign in with the browser) and AI services by URL are the Pro part.
-- **Any local AI model.** Twenty catalogue models in four groups marked by what fits this computer's memory; any `.gguf` file or folder (split files grouped); Hugging Face links checked by Hugging Face's own SHA-256; models that Ollama, LM Studio, Jan, GPT4All, llama.cpp, LocalAI, vLLM, text-generation-webui or llamafile already hold, found on their ports. Deleting a model stops the engine (and any stray one) first and checks the file is gone, so the disk space really comes back.
-- **Crash reports.** A crash is written to `~/.keel/crashes` (the error and the place in Keel's code — never your commands, output or files); Keel offers to send it, the owner reads it in the Owner Panel, and the fix follows. Settings → Crash reports: ask, always, never.
-- **Markets, honest.** Signals for commodities, indices, shares, crypto and forex on 1 m, 5 m, 30 m, 1 h, daily or any number of days, over all the history the source has. Every signal carries its backtest, its **out-of-sample** success rate from walk-forward testing, a self-tuned rule, a post-mortem of every past signal, position size and the chance of a losing run — which is never 0 %. No tool can promise a 1000 % success rate or zero risk, and Keel does not.
-- **Owner Panel** on the owner's Mac: subscriptions in detail (status, payments, customer, the computer each is used on), activation codes by lifetime / days / months / years, each code's state, IP, place, system, activation and end dates, history; withdraw, delete (a tombstone stays — a code is never issued twice), restore, notes, CSV; crash reports; charts, sounds and motion.
-- **Install with one command:** `brew install --cask jks-sys/tap/keel` (no `brew tap` step — the cask is published to the tap with every release, with both DMG checksums and `depends_on macos: :big_sur`, so the deprecation warning is gone) or `curl -fsSL https://ipconfig.co.network/updates/keel/install.sh | bash` (no Homebrew, no tap, no repository; checks the SHA-256 and clears the quarantine mark). Linux: the `.deb` with your package manager, or the AppImage made executable.
-- **Releases:** the release notes go to R2 as `release-notes-<version>.md`, the curl installer goes with every release, the public README carries both icons, four screenshots and the install block, and once a release is complete on all four platforms and mirrored to R2 the previous releases are deleted from both GitHub repos — only the newest installers stay. The size limit is now 5 MB.
-- **Gatekeeper, fixed:** clearing the quarantine mark works on paths with spaces and quotes (the fix script was being given quoted paths).
-- **Windows that can be seen:** a new or split window is always placed on a visible screen, never off-screen or on a full-screen Space; the Dock's Reopen no longer piles up extra windows; windows are named by their tab and folder.
-- **Colour everywhere, no pink:** more tokens coloured in output and in what you type — brackets by depth, strings, numbers, paths, flags, keywords — in every pane and tab.
-- **More sounds, motion and graphics:** five sound packs, animated tiles, bars and chips in the panels, confetti when codes are made; Reduce motion turns it all off.
-- **Fixed:** Settings → AI showed the word “null” where an empty section was (every panel now skips empty parts); typed-ahead scripts no longer get swallowed by a starting shell; deleted models no longer linger on disk; the About section fits one screen with release notes paged.
-
-- **`.command` files run when opened with Keel.** Keel now waits for the shell's first prompt before typing the script (it used to be typed too early and swallowed, leaving an empty tab), picks up files macOS hands over while Keel is still starting, and runs scripts that lost their execute bit through their `#!` line.
-- **Folders open with Keel:** right-click a folder → Open With → Keel (on Windows, “Open in Keel”) for a new tab in that folder.
-- **Window names in the Dock:** right-clicking Keel in the Dock lists each window by its tab and folder, not “Keel” for all of them.
-- **Animated tab icons** for what each tab is doing — building, downloading, testing, serving, SSH, git, editing, scripts and more — each in its own colour, never pink.
-- **A new failure badge** in place of the red ✕: its colour and mark say why — error, command not found, not allowed, wrong usage, stopped with Ctrl-C, crashed.
-- **Sounds and animation:** a chime when a command works, a low tone when it fails, ticks for tabs; Settings → Sounds and Motion.
-- **About fits on one screen:** two columns; only the newest release notes are open, older versions are one click away.
-- **Colour everywhere, no pink:** plain output is coloured for you — numbers, paths, quoted text, links, `key=value`, errors and warnings — and brackets are coloured by depth so pairs match at a glance. What you type in zsh is coloured too: real commands gold, unknown ones red, flags, strings and paths each their own colour. Every tab has its own colour, carried along the top of its panes.
-- **Open scripts with Keel:** right-click a `.command` or `.sh` file → Open With → Keel, and it runs in a new tab in its own folder. Folders open a tab there.
-- **Drag files in:** drop a file on the terminal and its path is typed at the cursor, quoted if it has spaces.
-- **One About section** with the app, its release notes and the creator.
-- **More terminal comforts:** find with case, whole-word and regex; clickable links; copy on select; Option as Meta; ⌥←/⌥→ word jumps; ⌘⌫ clears the line; visual bell; Save Output to Downloads; Open Current Folder; Reset; Scroll to top/bottom; tabs come back next time; a question before closing something still running.
-- **Releases fixed:** a home folder with spaces in its name no longer produces an empty version; every release checks the version online and carries its number, date and notes.
+- **Every system, built on your Mac.** `bash update.sh` now builds every installer itself — macOS (Apple silicon and Intel), Windows x64 and ARM64 (cross-compiled), Linux x86_64 and ARM64 (.deb, .rpm, AppImage, in Docker), FreeBSD 14 — side by side with a live board, no GitHub Actions. ChromeOS installs the Linux .deb. Haiku is not possible (no web view backend), and the notes say so.
+- **Install with Pour** on every system: `pour install --cask keel`. Keel registers itself on Pour at every release; no Homebrew tap any more.
+- **Mac App Store and Microsoft Store** packages are built and submitted automatically once `.env` has their credentials (left empty for now).
+- **Accounts.** Sign in with an emailed 6-digit code or a password, one account for every ipconfig app; Pro follows your account to two computers, with "Use this computer instead", your devices and subscriptions in Settings → Account, and 14 days offline.
+- **The Owner Panel is always connected** to the ipconfig dashboard — no connect or sync button: installs, people, devices, codes, subscriptions and crash reports with search, bulk actions, export and eight layouts.
+- **Menu bar, Dock and background.** Keel can live in the Dock, the menu bar, both, or in the background (and the background process can be turned off). The menu-bar icon opens a quick panel on a left click and a full menu on a right click; the Dock icon's right-click menu has New Window, New Tab, a folder, a script, AI, the speed test, recent folders and more. While Keel is in the Dock, closing the last window or tab quits it completely.
+- **Right-click in Finder, Explorer and Linux file managers:** New Keel Tab / Window Here, Split Here, Run, Edit, Git Status, Folder Size, List Files, Ask AI, Copy Path.
+- **Desktop notifications** for long or failed commands, updates and Pro — click one and the very window it came from comes back.
+- **`speed`** now shows download **and upload** speed and latency (`curl -fsSL https://ipconfig.co.network/speed | sh`), in zsh, bash, fish and PowerShell.
+- **Richer right-click menus** with submenus, checkmarks and shortcuts; Arrange Panes as a grid, columns, rows or main + side; menus become drill-down lists in small windows.
+- **More colour, no pink:** TODOs, ✓ and ✗, `code`, **bold**, table borders and separator lines, nine tab colours.
+- **More sound and motion:** 44 sounds in 13 sets, each with its own vector animation; Motion Off, Subtle or Lively.
+- **Settings in ten pages** on an icon rail; small windows never overlap or scroll sideways.
+- **README:** eleven animated demos (with sound in the videos) and fourteen 2× screenshots, recorded from the real interface; a star request at the top and the end; all 20 GitHub topics.
+- Keel is now under a proprietary licence (LICENSE).
 
 ## Features
 
-- **See at a glance what worked.** A gold mark beside every command that succeeded and a failure badge whose colour and mark say why — a cross for an error, ? for “command not found”, a barred circle for “not allowed”, a square for Ctrl-C — with the exit code and time, in the gutter, on the scrollbar, on the tab and in the status bar.
-- **Offline AI, free for everyone.** Install a model in Settings → AI (a catalogue of 20, from 400 MB up, marked by what fits this computer's memory), or use any GGUF file, folder, Hugging Face link, or an AI app already running here — Ollama, LM Studio, Jan, GPT4All, llama.cpp, LocalAI, vLLM, text-generation-webui, llamafile. Keel's own engine runs it on this computer only; nothing leaves your Mac. Deleting a model really frees the disk (the engine is stopped first and the deletion is verified).
-- **Ask, Explain, Fix, autocomplete.** Type `# what you want` at the prompt or press ⌘I for one exact command; ⇧⌘E explains the last command or error; ⇧⌘F fixes a failed one; grey suggestions as you type come first from your history, then exact completions (git, brew, docker, npm, cargo subcommands, branches, scripts, Makefile targets, SSH hosts), then the AI.
-- **GitHub Copilot and AI services by URL** (Keel Pro) — sign in to Copilot in the browser; add OpenAI, Gemini, Groq, Mistral, DeepSeek, OpenRouter or any OpenAI-compatible server by its URL.
-- **Markets** (on the owner's Mac): signals for commodities, indices, shares, crypto and forex on 1 m, 5 m, 30 m, 1 h, daily or any number of days, over all the history the source has. A trade plan for every reading — side, entry at the next candle's open, stop-loss and take-profit in pips, the times in Chennai (IST) — a confidence grade from the out-of-sample record with a "highest confidence only" filter and a watchlist scan, a rule that re-tunes itself as candles arrive and shows how its record moved, post-mortems of every past signal, position size and the chance of a losing run. Yahoo, Binance, Coinbase and Stooq as sources, spaced out so none refuses — honest numbers, never a promise.
-- **Start-up, like Twig's** — the tile draws itself, sparks fly, "Keel" rises, "An AI terminal" types itself, "By Jagadeesh Kumar S" fades in, with a synthesised start-up chord; any key skips it; off in Settings → Motion or with Reduce motion.
-- **Paste without the question** — "Always paste" stops the several-lines question for good; Settings brings it back.
-- **macOS asks for Downloads once, not after every update** — every release is signed with the same identity, so macOS remembers.
-- **Transparency** — Settings → Appearance → Transparency lets the desktop show through, with the system's blur behind it on macOS and Windows.
-- **24-hour time** everywhere: the status-bar clock, the Owner Panel, crash reports, Markets.
-- **Animated tab icons** — each tab shows what it is doing: building, downloading, uploading, testing, serving, editing, git, SSH, sudo, AI or a script, each in its own colour (never pink).
-- **Sounds and motion** — five sound packs, a chime when a command works, a low tone when it fails, ticks for tabs; choose off, failures only, long commands, or everything. Reduce motion turns the animation off.
-- **Tabs, splits and windows** — drag a tab out for its own window, drag another tab onto the terminal to join it as a split, move a pane back to a tab, merge all windows, resize splits by dragging. Windows always open on a screen you can see, and the Dock's right-click menu names each window by its tab and folder.
-- **Open scripts and folders with Keel** — right-click a `.command` or `.sh` file → Open With → Keel and it runs in a new tab in its own folder once the shell is ready. Right-click a folder → Open With → Keel, or Finder's “New Keel Tab Here” Quick Action.
-- **Gatekeeper, fixed** — *Clear quarantine* on any file or app from Keel (paths with spaces and quotes included), so “Apple could not verify…” goes away.
-- **Crash reports** — a crash is written to `~/.keel/crashes`; Keel offers to send it (never without a yes) and the owner reads it in the Owner Panel. No commands, output or file names are ever in a report.
-- **Owner Panel**, a window of its own (on the owner's Mac only): subscriptions in detail with create / pause / resume / change plan / note / hide / cancel, activation codes by lifetime / days / months / years, each code's state, IP, place, computer, activation and end dates; withdraw, delete, restore and annotate codes; crash reports readable in full, deletable and exportable as .md or .txt; charts, sounds and motion.
-- **Drag files in**, click to move the cursor inside the command you are typing, find with case/whole-word/regex, clickable links and paths, copy on select, Option as Meta, save output, open the current folder, snippets, a command palette, and your tabs and folders come back next time.
-- **Colour everywhere, no pink** — plain output is coloured for you (numbers, paths, strings, links, errors, `key=value`), brackets by depth so pairs match, what you type in zsh by meaning, and every tab in its own colour. Light and dark themes follow your system.
-- **Small** — the whole app is under 5 MB (CI refuses anything bigger); no browser engine bundled.
-- **Keel Pro** — ₹20 a month or ₹220 a year, or an activation code (needs the internet once). The terminal, the marks and the offline AI are free for good, with no limits on hosts, tabs or snippets.
-- **Updates itself**, checking every download twice (SHA-256 and an Ed25519 signature) before installing it. Release notes for every version are at `https://ipconfig.co.network/updates/keel/release-notes-<version>.md`.
+- **See at a glance what worked.** A gold check beside every command that succeeded and a failure badge whose colour and mark say why — a cross for an error, ? for “command not found”, a barred circle for “not allowed”, a square for Ctrl-C — with the exit code and time, in the gutter, on the scrollbar, on the tab and in the status bar.
+- **Offline AI, free for everyone.** Install a model in Settings → AI (a catalogue of 20, from 400 MB up, marked by what fits this computer's memory), or use any GGUF file, folder, Hugging Face link, or an AI app already running here — Ollama, LM Studio, Jan, GPT4All, llama.cpp, LocalAI, vLLM, text-generation-webui, llamafile. Nothing leaves your computer.
+- **Ask, Explain, Fix, autocomplete.** Type `# what you want` at the prompt or press ⌘I for one exact command; ⇧⌘E explains; ⇧⌘F fixes a failed command; grey suggestions as you type come from your history, exact completions, then the AI.
+- **GitHub Copilot and AI services by URL** (Keel Pro) — OpenAI, Gemini, Groq, Mistral, DeepSeek, OpenRouter or any OpenAI-compatible server.
+- **One account for every ipconfig app** — sign in with an emailed 6-digit code (it signs in by itself at the sixth digit) or a password; Pro follows your account to up to two computers, with “Use this computer instead” when every seat is taken, your subscriptions and devices in Settings → Account, and 14 days offline.
+- **Lives where you want** — in the Dock, in the menu bar, both, or in the background (Settings → Menus & Dock). While Keel is in the Dock, closing the last window or tab quits it completely.
+- **Menu-bar icon** — left click opens a quick panel (windows, recent folders, twelve one-click actions, where Keel lives); right click opens the full menu.
+- **Dock menu** — right-click Keel in the Dock: New Window, New Tab, a tab in a folder, run a script, Ask AI, Fix, Speed Test, Quick Panel, Gather or Merge windows, Recent Folders, Keel Lives In and More.
+- **Right-click in Finder, Explorer and Linux file managers** — on files and folders: New Keel Tab / Window Here, Split Here, Run in Keel, Edit in Keel, Git Status, Folder Size, List Files, Ask AI About It, Copy Path (macOS Services, a Windows “Keel” submenu, Nautilus, Caja, Nemo and Dolphin).
+- **Desktop notifications** — when a long command finishes or fails while you are elsewhere, when an update is ready, when Pro changes; clicking one brings back the very window it came from.
+- **Right-click menus everywhere** — terminal, tabs, marks, links, folders — with submenus, checkmarks and shortcuts; in a small window they turn into a list you drill into.
+- **Tabs, splits and windows** — drag a tab out for its own window or onto a terminal to join it as a split; Arrange Panes as a grid, columns, rows or main + side; merge all windows; resize by dragging. Small windows never overlap or scroll sideways.
+- **Colour everywhere, no pink** — plain output is coloured for you (numbers, paths, strings, links, errors, versions, dates, sizes, durations, TODOs, ✓ and ✗, `code`, **bold**, table borders), brackets by depth so pairs match, every tab in its own colour, nine tab hues. Light and dark themes follow your system.
+- **Animations and sounds** — 44 sounds in 13 sound sets, every one with its own self-drawing vector animation; Motion Off, Subtle or Lively, with tiny interface sounds in Lively only.
+- **Start-up** — the tile draws itself, sparks fly, "Keel" rises, "An AI terminal" types itself, "By Jagadeesh Kumar S" fades in, with a synthesised chord; any key skips it.
+- **Built-in `speed`** — download and upload speed and latency from ipconfig.co.network, in every shell.
+- **Owner Panel** (on the owner's computer only), always connected to the ipconfig dashboard: installs, people, devices, activation codes, subscriptions and crash reports — search, bulk actions, export, and eight layouts.
+- **Markets** (on the owner's computer): signals with a trade plan, out-of-sample success rates and confidence grades — honest numbers, never a promise.
+- **Crash reports** — written to `~/.keel/crashes`; sent only with a yes, and never with a command, output or file name of yours.
+- **Every system** — macOS (Apple silicon and Intel), Windows 10/11 (x64 and ARM64), Linux (x86_64 and ARM64: .deb, .rpm, AppImage), ChromeOS (through its Linux environment) and FreeBSD 14.
+- **Keel Pro** — ₹20 a month or ₹220 a year, or an activation code. The terminal, the marks and the offline AI are free for good.
+- **Updates itself**, checking every download twice (SHA-256 and an Ed25519 signature) before installing it.
 
 ---
-Made by Jagadeesh Kumar S, creator · [NewsCraft Studio on YouTube](https://www.youtube.com/@JKS-sys) · [ipconfig.co.network](https://ipconfig.co.network)
+
+> ⭐ **If Keel helps you, please give this repository a star** — [★ Star on GitHub](https://github.com/JKS-sys/keel-releases-29-sep-2026) — it is how other people find it, and it tells me what to build next.
+
+Made by Jagadeesh Kumar S, creator · [NewsCraft Studio on YouTube](https://www.youtube.com/@JKS-sys) · [ipconfig.co.network](https://ipconfig.co.network) · Licence: see [LICENSE](LICENSE)
