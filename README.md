@@ -16,7 +16,7 @@ An AI terminal for macOS, Windows, Linux, ChromeOS and FreeBSD that shows at a g
 
 **Website:** [ipconfig.co.network](https://ipconfig.co.network) · **App page:** [ipconfig.co.network/keel](https://ipconfig.co.network/keel) · **Releases:** [github.com/JKS-sys/keel-releases-29-sep-2026/releases](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases)
 
-**Latest: [Keel 0.4.9](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.9) — 04-nov-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.9.md)
+**Latest: [Keel 0.4.10](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.10) — 04-nov-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.10.md)
 
 ## Install
 
@@ -37,11 +37,11 @@ Pour picks the right installer for your computer, checks its SHA-256 against `la
 
 **Or download it yourself:**
 
-- **macOS** — [Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-macos-apple-silicon-04-nov-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-macos-intel-04-nov-2026.dmg): drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`.
-- **Windows 10 and 11** — [x64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-windows-x64-04-nov-2026.exe) · [ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-windows-arm64-04-nov-2026.exe). SmartScreen asks once — *More info → Run anyway*.
-- **Linux** — [.deb x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-linux-amd64-04-nov-2026.deb) · [.deb ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-linux-arm64-04-nov-2026.deb) · [.rpm x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-linux-x86_64-04-nov-2026.rpm) · [.rpm ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-linux-aarch64-04-nov-2026.rpm) · [AppImage x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-linux-x86_64-04-nov-2026.AppImage) (`chmod +x`, then run it).
+- **macOS** — [Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-macos-apple-silicon-04-nov-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-macos-intel-04-nov-2026.dmg): drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`.
+- **Windows 10 and 11** — [x64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-windows-x64-04-nov-2026.exe) · [ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-windows-arm64-04-nov-2026.exe). SmartScreen asks once — *More info → Run anyway*.
+- **Linux** — [.deb x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-linux-amd64-04-nov-2026.deb) · [.deb ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-linux-arm64-04-nov-2026.deb) · [.rpm x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-linux-x86_64-04-nov-2026.rpm) · [.rpm ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-linux-aarch64-04-nov-2026.rpm) · [AppImage x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-linux-x86_64-04-nov-2026.AppImage) (`chmod +x`, then run it).
 - **ChromeOS** — turn on *Settings → About ChromeOS → Developers → Linux development environment*, then install the Linux .deb for your Chromebook (`sudo apt install ./Keel-…deb`), or use Pour in the Linux terminal.
-- **FreeBSD 14** — [x86_64 tarball](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.9/Keel-0.4.9-freebsd-x86_64-04-nov-2026.tar.gz): `sudo pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack, run `./keel`.
+- **FreeBSD 14** — [x86_64 tarball](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.10/Keel-0.4.10-freebsd-x86_64-04-nov-2026.tar.gz): `sudo pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack, run `./keel`.
 - **Haiku** — not available: the web view library Keel is built on has no Haiku backend yet, so there is no honest way to ship it there.
 
 **No Pour, one line (macOS and Linux):** `curl -fsSL https://ipconfig.co.network/updates/keel/install.sh | bash`
@@ -188,19 +188,9 @@ Shrink the window and nothing overlaps or scrolls sideways: the toolbar wraps, S
 
 *The dark theme on the Mac: warm black, gold and warm white, straight from the app icon.*
 
-## What's new in 0.4.9
+## What's new in 0.4.10
 
-- Release on a new Mac: `update.sh` now gets an LTS Node with its npm from Pour (Node 22) when the Mac has a Node that is not LTS or came without npm, and installs Rust with Pour (`rustup` and the stable toolchain) instead of `curl | sh`.
-- Mac App Store build: Keel Pro through in-app purchase (StoreKit 2: monthly, yearly, lifetime), linked to your ipconfig account; Restore Purchases.
-
-- **Releases read every credential from the ipconfig Vault** — no .env needed. `update.sh` opens it with the dashboard master key kept in the macOS Keychain (asked once if missing); `bash update.sh vault-import` moves an old .env into the Vault.
-
-- **Keel's data now lives in the ipconfig dashboard** (its key-value store, namespace keel-kv): activation codes, the computers subscriptions are used on, and crash reports. The next release copies everything out of Workers KV, checks it all arrived, deletes the KV namespace and deploys the Worker without it. Keel never used a D1 database, so there is none to remove.
-- **More ways to get Pro** in Settings → Keel Pro: Lifetime, Two computers, Family (5 people), Team (10 seats), Give Pro as a gift, and every ipconfig app together — and, when you are already Pro, the same list to upgrade or add computers.
-
-- **Copy and paste keep the result.** Copying commands from Keel writes ✓ or ✕ with the exit code in front of each command, so a paste in a chat or a document still says whether it worked (Settings → Terminal can turn it off).
-- **Pasting elsewhere no longer garbles symbols:** "▮", "·" and "—" copied from Keel used to arrive as "‚ñÆ", "¬∑" and "‚Äî" — the clipboard is now always UTF-8.
-- **Releases build only macOS on Apple silicon**, much faster; `--only windows,linux,freebsd` still builds the others when wanted. Old R2 files are tidied with the Cloudflare API token from `.env` (wrangler's expired login was refused).
+- Improved: Installing and releasing.
 
 ## Features
 
