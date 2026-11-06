@@ -16,7 +16,7 @@ An AI terminal for macOS, Windows, Linux, ChromeOS and FreeBSD that shows at a g
 
 **Website:** [ipconfig.co.network](https://ipconfig.co.network) · **App page:** [ipconfig.co.network/keel](https://ipconfig.co.network/keel) · **Releases:** [github.com/JKS-sys/keel-releases-29-sep-2026/releases](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases)
 
-**Latest: [Keel 0.4.11](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.11) — 04-nov-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.11.md)
+**Latest: [Keel 0.4.12](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/tag/v0.4.12) — 06-nov-2026** · [release notes](https://ipconfig.co.network/updates/keel/release-notes-0.4.12.md)
 
 ## Install
 
@@ -37,11 +37,11 @@ Pour picks the right installer for your computer, checks its SHA-256 against `la
 
 **Or download it yourself:**
 
-- **macOS** — [Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-macos-apple-silicon-04-nov-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-macos-intel-04-nov-2026.dmg): drag Keel to Applications, then run once in Terminal: `xattr -cr /Applications/Keel.app`.
-- **Windows 10 and 11** — [x64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-windows-x64-04-nov-2026.exe) · [ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-windows-arm64-04-nov-2026.exe). SmartScreen asks once — *More info → Run anyway*.
-- **Linux** — [.deb x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-linux-amd64-04-nov-2026.deb) · [.deb ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-linux-arm64-04-nov-2026.deb) · [.rpm x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-linux-x86_64-04-nov-2026.rpm) · [.rpm ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-linux-aarch64-04-nov-2026.rpm) · [AppImage x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-linux-x86_64-04-nov-2026.AppImage) (`chmod +x`, then run it).
+- **macOS** — [Apple silicon](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-macos-apple-silicon-06-nov-2026.dmg) · [Intel](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-macos-intel-06-nov-2026.dmg): open the DMG and drag Keel to Applications — signed by Jagadeesh Kumar S and notarized by Apple.
+- **Windows 10 and 11** — [x64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-windows-x64-06-nov-2026.exe) · [ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-windows-arm64-06-nov-2026.exe). SmartScreen asks once — *More info → Run anyway*.
+- **Linux** — [.deb x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-linux-amd64-06-nov-2026.deb) · [.deb ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-linux-arm64-06-nov-2026.deb) · [.rpm x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-linux-x86_64-06-nov-2026.rpm) · [.rpm ARM64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-linux-aarch64-06-nov-2026.rpm) · [AppImage x86_64](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-linux-x86_64-06-nov-2026.AppImage) (`chmod +x`, then run it).
 - **ChromeOS** — turn on *Settings → About ChromeOS → Developers → Linux development environment*, then install the Linux .deb for your Chromebook (`sudo apt install ./Keel-…deb`), or use Pour in the Linux terminal.
-- **FreeBSD 14** — [x86_64 tarball](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.11/Keel-0.4.11-freebsd-x86_64-04-nov-2026.tar.gz): `sudo pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack, run `./keel`.
+- **FreeBSD 14** — [x86_64 tarball](https://github.com/JKS-sys/keel-releases-29-sep-2026/releases/download/v0.4.12/Keel-0.4.12-freebsd-x86_64-06-nov-2026.tar.gz): `sudo pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack, run `./keel`.
 - **Haiku** — not available: the web view library Keel is built on has no Haiku backend yet, so there is no honest way to ship it there.
 
 **No Pour, one line (macOS and Linux):** `curl -fsSL https://ipconfig.co.network/updates/keel/install.sh | bash`
@@ -188,9 +188,13 @@ Shrink the window and nothing overlaps or scrolls sideways: the toolbar wraps, S
 
 *The dark theme on the Mac: warm black, gold and warm white, straight from the app icon.*
 
-## What's new in 0.4.11
+## What's new in 0.4.12
 
-- Improved: Updates.
+- **A log box in the status bar**: when a command ends, chips count the error, warning, note and success lines in its output, each with its own drawn, animated icon and colour — click one to find those lines. A softer second sound follows when a command worked but its log had errors or warnings.
+- **14 new sounds, each with its own self-drawing animation** (75 in all): log errors, log warnings, long logs, clean logs, Docker, Python, Rust, Node.js, deploys, databases, network tools, kill, sudo and clean-ups — Keel picks them from the command's words.
+- **More colour**: every tab has its own hue line, settings headings and labels take turns through the palette (never pink).
+- Mac App Store: three app previews with sound and eight 2880 × 1800 screenshots (`node scripts/demos.mjs appstore`), and every App Store Connect field written out in docs/appstore/APP-STORE-CONNECT.md.
+- Settings → Keel Pro: the Lifetime option is gone from "More ways to get Pro".
 
 ## Features
 
